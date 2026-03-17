@@ -73,7 +73,6 @@
         bottom: 0;
         width: 180px;
         height: 180px;
-        background: linear-gradient(315deg, #000000 0%, transparent 70%);
       }
 
       .content-inner {
@@ -172,7 +171,6 @@
 
       .phone-shadow {
         width: 100%;
-        max-width: 360px;
         
       }
 
@@ -217,6 +215,27 @@
         .badges {
           grid-template-columns: repeat(3, 1fr);
         }
+        .phone-shadow {
+        width: 100%;
+        max-width: 360px;
+        
+      }
+
+      .phone {
+        padding: 0px;
+        position: relative;
+      }
+
+      .screen {
+        border-radius: 0px;
+        overflow: hidden;
+      }
+
+      .screen img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+      }
       }
 
       @media (min-width: 1024px) {
