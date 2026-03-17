@@ -73,6 +73,7 @@
         bottom: 0;
         width: 180px;
         height: 180px;
+      
       }
 
       .content-inner {
@@ -171,6 +172,7 @@
 
       .phone-shadow {
         width: 100%;
+        max-width: 360px;
         
       }
 
@@ -215,56 +217,29 @@
         .badges {
           grid-template-columns: repeat(3, 1fr);
         }
-        .phone-shadow {
-        width: 100%;
-        max-width: 360px;
-        
-      }
-
-      .phone {
-        padding: 0px;
-        position: relative;
-      }
-
-      .screen {
-        border-radius: 0px;
-        overflow: hidden;
-      }
-
-      .screen img {
-        width: 100%;
-        display: block;
-        object-fit: cover;
-      }
       }
 
       @media (min-width: 1024px) {
-        .container {
-          grid-template-columns: 1.08fr 0.92fr;
-          gap: 56px;
-        }
+  .container {
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 56px;
+    align-items: end; /* 👈 faz o conteúdo alinhar embaixo */
+  }
 
-        .content {
-          text-align: left;
-          padding: 24px 0;
-        }
+  .phone-wrap {
+    justify-content: flex-end;
+    align-items: flex-end; /* 👈 garante que o celular encoste na base */
+  }
 
-        .content-inner {
-          margin: 0;
-        }
+  .phone-shadow {
+    max-width: 480px; /* 👈 aumenta o tamanho do celular */
+    transform: translateY(40px); /* 👈 “empurra” ele mais pra baixo */
+  }
 
-        .brand {
-          align-items: flex-start;
-        }
-
-        .subtitle {
-          margin: 0;
-        }
-
-        .phone-wrap {
-          justify-content: flex-end;
-        }
-      }
+  .phone {
+    border-width: 12px; /* opcional: deixa mais robusto */
+  }
+}
     </style>
   </head>
   <body>
